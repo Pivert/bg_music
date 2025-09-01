@@ -5,6 +5,5 @@
   "type": "mod",
   "short_description": "Ambient background music system with zone-based playback",
   "repo": "https://github.com/pivert-org/bg_music",
-  "content_warnings": [],
-  "release": 1
+  "content_warnings": []
 }
