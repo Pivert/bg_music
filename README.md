@@ -86,21 +86,25 @@ Rescans the sounds/ directory and reports how many songs were found.
 ## How It Works
 
 1. **Music Zones**: Each zone is defined by a center position, trigger radius, and extra radius
-2. **Entering Zone**: When a player enters the trigger radius, a new random song starts playing
+2. **Entering Zone**: When a player enters the trigger radius, a new song from the fixed playlist starts playing
 3. **Exiting Zone**: When a player exits the trigger radius + extra radius, music stops
-4. **Song Selection**: A new random song is selected every time a player enters a zone
+4. **Song Selection**: Fixed playlists ensure no song repeats until all have played
 5. **Volume**: Each zone can have its own volume level
 
 ## Music Stereo Node
 
 The mod provides its own stereo node (`bg_music:stereo`) that can be crafted and placed:
-- **Right-click**: Start playing a random song within 15m radius
-- **Second right-click**: Stop the music
-- **Continuous random**: Each song completion triggers a new random song
+- **Right-click**: Start playing a song from the fixed playlist within 15m radius
+- **Song completion**: Automatically stops when song ends
+- **Single playback**: Only one song plays at a time globally
 - **Volume**: Fixed at 70% for stereo playback
 - **Crafting**: Made with steel, copper, mese crystal, and wood
 
-**Note**: This is a separate stereo node from homedecor's stereo, designed specifically for music playback.
+## Fixed Playlists
+
+- **Zone playlists**: Fixed random playlists per zone, regenerated on server restart or rescan
+- **Stereo playlist**: Fixed random playlist for stereo, regenerated on server restart or rescan
+- **No repeats**: Songs won't repeat until all have been played from the playlist
 
 ## File Structure
 

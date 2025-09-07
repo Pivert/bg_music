@@ -1,9 +1,13 @@
 {
-  "title": "Background Music",
-  "name": "bg_music",
-  "license": "GPL-3.0-or-later",
-  "type": "mod",
-  "short_description": "Ambient background music system with zone-based playback",
-  "repo": "https://github.com/pivert-org/bg_music",
-  "content_warnings": []
+	"title": "Background Music",
+	"name": "bg_music",
+	"author": "Pivert",
+	"license": "GPL-3.0-or-later",
+	"type": "mod",
+	"short_description": "Ambient background music system with zone-based playback, stereo support, and fixed playlists",
+	"repo": "https://github.com/Pivert/bg_music",
+	"screenshots": [],
+	"content_warnings": "",
+	"release": 2,
+	"tags": ["audio", "server", "music", "ambient"]
 }
