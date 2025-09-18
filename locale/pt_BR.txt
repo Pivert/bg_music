@@ -1,0 +1,70 @@
+# Brazilian Portuguese translation for bg_music mod
+
+# Player join messages
+Music is currently disabled for you. Use @1 to enable it. = A música está atualmente desativada para você. Use @1 para ativá-la.
+Music is enabled for you. Use @1 to disable it. = A música está ativada para você. Use @1 para desativá-la.
+
+# Music preference messages
+Music disabled. You will no longer hear automatic background music. = Música desativada. Você não ouvirá mais a música de fundo automática.
+Music enabled. You will now hear background music. = Música ativada. Agora você ouvirá a música de fundo.
+Failed to disable music. = Falha ao desativar a música.
+Failed to enable music. = Falha ao ativar a música.
+
+# Volume control messages
+Usage: @1 <volume> (0-100) = Uso: @1 <volume> (0-100)
+Volume set to @1% = Volume definido para @1%
+Volume must be between 0 and 100 = O volume deve estar entre 0 e 100
+Set your personal music volume (0-100%) = Defina seu volume de música pessoal (0-100%)
+
+# Stereo messages
+Music is disabled for you. Use @1 to enable it. = A música está desativada para você. Use @1 para ativá-la.
+Stereo music stopped = Música estéreo parada
+No music files found in sounds/ directory = Nenhum arquivo de música encontrado no diretório sounds/
+Playing: @1 = Tocando: @1
+
+# Playmusic command
+Invalid song number. Use 1-@1 = Número de música inválido. Use 1-@1
+No music available = Nenhuma música disponível
+Song not found: @1. Use @2 to see available songs = Música não encontrada: @1. Use @2 para ver as músicas disponíveis
+Player not found = Jogador não encontrado
+Failed to play music = Falha ao tocar a música
+Playing: @1 = Tocando: @1
+No players available to hear the music (all have disabled music) = Nenhum jogador disponível para ouvir a música (todos desativaram a música)
+You have disabled music. Use @1 first. = Você desativou a música. Use @1 primeiro.
+Stopped @1 music instances = Parou @1 instâncias de música
+No music currently playing = Nenhuma música tocando no momento
+
+# Setmusic command
+Usage: @1 <radius_trigger> <extra_radius> [<volume>] [<filter>] = Uso: @1 <raio_gatilho> <raio_extra> [<volume>] [<filtro>]
+Radius trigger must be a positive number = O raio de gatilho deve ser um número positivo
+Extra radius must be a non-negative number = O raio extra deve ser um número não negativo
+Volume must be between @1 and @2 = O volume deve estar entre @1 e @2
+Player not found = Jogador não encontrado
+Background music location set at @1 with trigger radius @2 and extra radius @3 = Localização da música de fundo definida em @1 com raio de gatilho @2 e raio extra @3
+Background music location set at @1 with trigger radius @2 and extra radius @3 (filter: @4) = Localização da música de fundo definida em @1 com raio de gatilho @2, raio extra @3 (filtro: @4)
+
+# Getmusic command
+No background music locations defined = Nenhuma localização de música de fundo definida
+Background music locations: = Localizações de música de fundo:
+
+# Delmusic command
+Invalid index. Use @1 to see valid indices = Índice inválido. Use @1 para ver índices válidos
+Removed background music location at @1 = Localização de música de fundo removida em @1
+
+# Listmusic command
+No songs match the filter: @1 = Nenhuma música corresponde ao filtro: @1
+No music files found in sounds/ directory = Nenhum arquivo de música encontrado no diretório sounds/
+Available music files = Arquivos de música disponíveis
+Available music files (filter: @1): = Arquivos de música disponíveis (filtro: @1):
+(Rescanned: @1 → @2 songs)  = (Reescaneado: @1 → @2 músicas)
+
+# Rescanmusic command
+Music folder rescanned. Found @1 songs (was @2) = Pasta de música reescaneada. Encontradas @1 músicas (era @2)
+
+# Other messages
+Music is @1 for player @2 = A música está @1 para o jogador @2
+Started playing @1 for @2 = Começou a tocar @1 para @2
+Stopped music for @1 = Parou a música para @1
+Applying filter: @1 = Aplicando filtro: @1
+Filter '@1' matched @2 songs = O filtro '@1' correspondeu a @2 músicas
+Mod loaded with @1 songs available = Mod carregado com @1 músicas disponíveis

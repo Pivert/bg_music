@@ -1,0 +1,70 @@
+# Spanish translation for bg_music mod
+
+# Player join messages
+Music is currently disabled for you. Use @1 to enable it. = La música está actualmente desactivada para ti. Usa @1 para activarla.
+Music is enabled for you. Use @1 to disable it. = La música está activada para ti. Usa @1 para desactivarla.
+
+# Music preference messages
+Music disabled. You will no longer hear automatic background music. = Música desactivada. Ya no escucharás la música de fondo automática.
+Music enabled. You will now hear background music. = Música activada. Ahora escucharás la música de fondo.
+Failed to disable music. = Error al desactivar la música.
+Failed to enable music. = Error al activar la música.
+
+# Volume control messages
+Usage: @1 <volume> (0-100) = Uso: @1 <volumen> (0-100)
+Volume set to @1% = Volumen establecido al @1%
+Volume must be between 0 and 100 = El volumen debe estar entre 0 y 100
+Set your personal music volume (0-100%) = Establece tu volumen musical personal (0-100%)
+
+# Stereo messages
+Music is disabled for you. Use @1 to enable it. = La música está desactivada para ti. Usa @1 para activarla.
+Stereo music stopped = Música estéreo detenida
+No music files found in sounds/ directory = No se encontraron archivos de música en el directorio sounds/
+Playing: @1 = Reproduciendo: @1
+
+# Playmusic command
+Invalid song number. Use 1-@1 = Número de canción inválido. Usa 1-@1
+No music available = No hay música disponible
+Song not found: @1. Use @2 to see available songs = Canción no encontrada: @1. Usa @2 para ver las canciones disponibles
+Player not found = Jugador no encontrado
+Failed to play music = Error al reproducir la música
+Playing: @1 = Reproduciendo: @1
+No players available to hear the music (all have disabled music) = No hay jugadores disponibles para escuchar la música (todos han desactivado la música)
+You have disabled music. Use @1 first. = Has desactivado la música. Usa @1 primero.
+Stopped @1 music instances = Detenidas @1 instancias de música
+No music currently playing = No hay música reproduciéndose actualmente
+
+# Setmusic command
+Usage: @1 <radius_trigger> <extra_radius> [<volume>] [<filter>] = Uso: @1 <radio_activación> <radio_extra> [<volumen>] [<filtro>]
+Radius trigger must be a positive number = El radio de activación debe ser un número positivo
+Extra radius must be a non-negative number = El radio extra debe ser un número no negativo
+Volume must be between @1 and @2 = El volumen debe estar entre @1 y @2
+Player not found = Jugador no encontrado
+Background music location set at @1 with trigger radius @2 and extra radius @3 = Ubicación de música de fondo establecida en @1 con radio de activación @2 y radio extra @3
+Background music location set at @1 with trigger radius @2 and extra radius @3 (filter: @4) = Ubicación de música de fondo establecida en @1 con radio de activación @2, radio extra @3 (filtro: @4)
+
+# Getmusic command
+No background music locations defined = No hay ubicaciones de música de fondo definidas
+Background music locations: = Ubicaciones de música de fondo:
+
+# Delmusic command
+Invalid index. Use @1 to see valid indices = Índice inválido. Usa @1 para ver índices válidos
+Removed background music location at @1 = Eliminada ubicación de música de fondo en @1
+
+# Listmusic command
+No songs match the filter: @1 = Ninguna canción coincide con el filtro: @1
+No music files found in sounds/ directory = No se encontraron archivos de música en el directorio sounds/
+Available music files = Archivos de música disponibles
+Available music files (filter: @1): = Archivos de música disponibles (filtro: @1):
+(Rescanned: @1 → @2 songs)  = (Reescaneado: @1 → @2 canciones)
+
+# Rescanmusic command
+Music folder rescanned. Found @1 songs (was @2) = Carpeta de música reescaneada. Encontradas @1 canciones (eran @2)
+
+# Other messages
+Music is @1 for player @2 = La música está @1 para el jugador @2
+Started playing @1 for @2 = Comenzó a reproducir @1 para @2
+Stopped music for @1 = Detuvo la música para @1
+Applying filter: @1 = Aplicando filtro: @1
+Filter '@1' matched @2 songs = El filtro '@1' coincidió con @2 canciones
+Mod loaded with @1 songs available = Mod cargado con @1 canciones disponibles

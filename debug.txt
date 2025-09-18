@@ -1,0 +1,25 @@
+2025-09-18 22:33:37: WARNING[OpenALSoundManager]: OpenALSoundManager::createPlayingSound: Creating positional stereo sound "dolphin_call.3.ogg".
+2025-09-18 22:35:43: WARNING[ServerStart]: [nanobasic] Add 'nanobasic' to the list of 'secure.trusted_mods' in minetest.conf!!!
+2025-09-18 22:35:43: WARNING[ServerStart]: Node towercrane:mast_ctrl_on has unknown drawtype "node"
+2025-09-18 22:35:43: WARNING[ServerStart]: Node towercrane:mast_ctrl_off has unknown drawtype "node"
+2025-09-18 22:35:43: WARNING[ServerStart]: 3d_armor_ip: Mod loaded but unused.
+2025-09-18 22:35:43: WARNING[ServerStart]: Field "image" on TileDef is deprecated, use "name" instead. (at /home/pivert/luanti/mods/techage_modpack/hyperloop/tube.lua:56)
+2025-09-18 22:35:43: WARNING[ServerStart]: Field "image" on TileDef is deprecated, use "name" instead. (at /home/pivert/luanti/mods/techage_modpack/hyperloop/tube.lua:115)
+2025-09-18 22:35:43: WARNING[ServerStart]: Field "image" on TileDef is deprecated, use "name" instead. (at /home/pivert/luanti/mods/techage_modpack/hyperloop/tube.lua:169)
+2025-09-18 22:35:43: WARNING[ServerStart]: Field "image" on TileDef is deprecated, use "name" instead. (at /home/pivert/luanti/mods/techage_modpack/hyperloop/tube.lua:169)
+2025-09-18 22:35:43: WARNING[ServerStart]: Field "image" on TileDef is deprecated, use "name" instead. (at /home/pivert/luanti/mods/signs_bot/cmd_place.lua:435)
+2025-09-18 22:35:43: WARNING[ServerStart]: Not registering alias, item with same name is already defined: homedecor:rope_light_on_floor_on -> homedecor:rope_light_on_floor_14
+2025-09-18 22:35:43: WARNING[ServerStart]: Not registering alias, item with same name is already defined: homedecor:rope_light_on_ceiling_on -> homedecor:rope_light_on_ceiling_14
+2025-09-18 22:35:43: WARNING[ServerStart]: Not registering alias, item with same name is already defined: homedecor:plasma_ball_on -> homedecor:plasma_ball_14
+2025-09-18 22:35:43: WARNING[ServerStart]: Not registering alias, item with same name is already defined: homedecor:rope_light_on_floor_off -> homedecor:rope_light_on_floor_0
+2025-09-18 22:35:43: WARNING[ServerStart]: Not registering alias, item with same name is already defined: homedecor:rope_light_on_ceiling_off -> homedecor:rope_light_on_ceiling_0
+2025-09-18 22:35:43: WARNING[ServerStart]: Not registering alias, item with same name is already defined: homedecor:plasma_ball_off -> homedecor:plasma_ball_0
+2025-09-18 22:35:43: WARNING[ServerStart]: Not registering alias, item with same name is already defined: 3dforniture:table_lamp -> homedecor:table_lamp_off
+2025-09-18 22:35:43: ACTION[ServerStart]: [bg_music] Found 7 songs (was 0)
+2025-09-18 22:35:43: ACTION[ServerStart]: [bg_music] Mod loaded with 7 songs available
+2025-09-18 22:35:43: ERROR[Main]: ModError: Runtime error from mod 'bg_music' in callback on_mods_loaded(): /home/pivert/luanti/mods/bg_music/init.lua:960: attempt to call field 'gettext' (a nil value)
+2025-09-18 22:35:43: ERROR[Main]: stack traceback:
+2025-09-18 22:35:43: ERROR[Main]: 	/home/pivert/luanti/mods/bg_music/init.lua:960: in function </home/pivert/luanti/mods/bg_music/init.lua:952>
+2025-09-18 22:35:43: ERROR[Main]: 	/home/pivert/luanti/bin/../builtin/common/register.lua:26: in function </home/pivert/luanti/bin/../builtin/common/register.lua:12>
+2025-09-18 22:35:43: ERROR[Main]: Voir « debug.txt » pour plus d'informations.
+2025-09-18 22:35:43: ACTION[ServerStop]: Server: Shutting down
