@@ -20,8 +20,9 @@ local MUSIC_PREF_ENABLED = "enabled"
 local MUSIC_PREF_DISABLED = "disabled"
 local DEFAULT_MUSIC_VOLUME = 90 -- Default personal volume percentage
 
--- Get translator function (using PO format)
-local S = core.get_translator("bg_music")
+-- Get translator function (using .tr format like working example)
+local modname = core.get_current_modname()
+local S = core.get_translator(modname)
 
 -- Debug function to test translations
 local function debug_translate(key, ...)

@@ -1,0 +1,71 @@
+# textdomain: bg_music
+# Template file for bg_music mod translations
+
+# Player join messages
+Music is currently disabled for you. Use @1 to enable it.=
+Music is enabled for you. Use @1 to disable it.=
+
+# Music preference messages
+Music disabled. You will no longer hear automatic background music.=
+Music enabled. You will now hear background music.=
+Failed to disable music.=
+Failed to enable music.=
+
+# Volume control messages
+Set your personal music volume (0-100%)=
+Usage: @1 <volume> (0-100)=
+Volume set to @1%=
+Volume must be between 0 and 100=
+
+# Stereo messages
+Music is disabled for you. Use @1 to enable it.=
+Stereo music stopped=
+No music files found in sounds/ directory=
+Playing: @1=
+
+# Playmusic command
+Play a song by number (from /listmusic) or name. Use 'all' to play globally=
+No players available to hear the music (all have disabled music)=
+You have disabled music. Use @1 first.=
+Invalid song number. Use 1-@1=
+No music available=
+Song not found: @1. Use @2 to see available songs=
+Player not found=
+Failed to play music=
+
+# Playmusic command
+Stop all background music currently playing=
+Stopped @1 music instances=
+No music currently playing=
+
+# Music preference commands
+Disable all background music for yourself=
+Enable background music for yourself=
+
+# Setmusic command
+Set background music at current position. radius_trigger: distance where music starts (meters). extra_radius: additional distance where music stops (meters). volume: 5-99 (default 65). filter: optional song filter (supports wildcards, | for OR, ! for NOT).=
+Usage: @1 <radius_trigger> <extra_radius> [<volume>] [<filter>]=
+Radius trigger must be a positive number=
+Extra radius must be a non-negative number=
+Volume must be between @1 and @2=
+Player not found=
+Background music location set at @1 with trigger radius @2 and extra radius @3=
+Background music location set at @1 with trigger radius @2 and extra radius @3 (filter: @4)=
+List all background music locations with coordinates, radius, volume, and filters=
+No background music locations defined=
+Background music locations:=
+Invalid index. Use @1 to see valid indices=
+Removed background music location at @1=
+List available music files with optional filter (supports wildcards, | for OR, ! for NOT)=
+
+# Listmusic command
+(Rescanned: @1 → @2 songs) =
+No songs match the filter: @1=
+No music files found in sounds/ directory=
+Available music files=
+Available music files (filter: @1):=
+Manually trigger a rescan of the music folder=
+Music folder rescanned. Found @1 songs (was @2)=
+
+# Stereo
+Music Stereo=

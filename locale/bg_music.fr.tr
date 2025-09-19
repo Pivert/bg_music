@@ -1,0 +1,71 @@
+# textdomain: bg_music
+# French translations for bg_music mod
+
+# Player join messages
+Music is currently disabled for you. Use @1 to enable it.=La musique est actuellement désactivée pour vous. Utilisez @1 pour l'activer.
+Music is enabled for you. Use @1 to disable it.=La musique est activée pour vous. Utilisez @1 pour la désactiver.
+
+# Music preference messages
+Music disabled. You will no longer hear automatic background music.=Musique désactivée. Vous n'entendrez plus la musique de fond automatique.
+Music enabled. You will now hear background music.=Musique activée. Vous entendrez maintenant la musique de fond.
+Failed to disable music.=Échec de la désactivation de la musique.
+Failed to enable music.=Échec de l'activation de la musique.
+
+# Volume control messages
+Set your personal music volume (0-100%)=Régler votre volume musical personnel (0-100%)
+Usage: @1 <volume> (0-100)=Utilisation : @1 <volume> (0-100)
+Volume set to @1%=Volume réglé à @1%
+Volume must be between 0 and 100=Le volume doit être entre 0 et 100
+
+# Stereo messages
+Music is disabled for you. Use @1 to enable it.=La musique est désactivée pour vous. Utilisez @1 pour l'activer.
+Stereo music stopped=Musique stéréo arrêtée
+No music files found in sounds/ directory=Aucun fichier musical trouvé dans le répertoire sounds/
+Playing: @1=Lecture : @1
+
+# Playmusic command
+Play a song by number (from /listmusic) or name. Use 'all' to play globally=Jouer une chanson par numéro (depuis /listmusic) ou nom. Utilisez 'all' pour jouer globalement
+No players available to hear the music (all have disabled music)=Aucun joueur disponible pour entendre la musique (tous ont désactivé la musique)
+You have disabled music. Use @1 first.=Vous avez désactivé la musique. Utilisez @1 d'abord.
+Invalid song number. Use 1-@1=Numéro de chanson invalide. Utilisez 1-@1
+No music available=Aucune musique disponible
+Song not found: @1. Use @2 to see available songs=Chanson introuvable : @1. Utilisez @2 pour voir les chansons disponibles
+Player not found=Joueur introuvable
+Failed to play music=Échec de la lecture de la musique
+
+# Playmusic command
+Stop all background music currently playing=Arrêter toute la musique de fond en cours de lecture
+Stopped @1 music instances=Arrêt de @1 instances musicales
+No music currently playing=Aucune musique en cours de lecture
+
+# Music preference commands
+Disable all background music for yourself=Désactiver toute la musique de fond pour vous
+Enable background music for yourself=Activer la musique de fond pour vous
+
+# Setmusic command
+Set background music at current position. radius_trigger: distance where music starts (meters). extra_radius: additional distance where music stops (meters). volume: 5-99 (default 65). filter: optional song filter (supports wildcards, | for OR, ! for NOT).=Définir la musique de fond à la position actuelle. rayon_déclenchement : distance où la musique commence (mètres). rayon_supplémentaire : distance additionnelle où la musique s'arrête (mètres). volume : 5-99 (par défaut 65). filtre : filtre de chansons optionnel (supporte les jokers, | pour OU, ! pour NOT).
+Usage: @1 <radius_trigger> <extra_radius> [<volume>] [<filter>]=Utilisation : @1 <rayon_déclenchement> <rayon_supplémentaire> [<volume>] [<filtre>]
+Radius trigger must be a positive number=Le rayon de déclenchement doit être un nombre positif
+Extra radius must be a non-negative number=Le rayon supplémentaire doit être un nombre positif ou nul
+Volume must be between @1 and @2=Le volume doit être entre @1 et @2
+Player not found=Joueur introuvable
+Background music location set at @1 with trigger radius @2 and extra radius @3=Emplacement de musique de fond défini en @1 avec un rayon de déclenchement de @2 et un rayon supplémentaire de @3
+Background music location set at @1 with trigger radius @2 and extra radius @3 (filter: @4)=Emplacement de musique de fond défini en @1 avec un rayon de déclenchement de @2, un rayon supplémentaire de @3 (filtre : @4)
+List all background music locations with coordinates, radius, volume, and filters=Lister tous les emplacements de musique de fond avec coordonnées, rayon, volume et filtres
+No background music locations defined=Aucun emplacement de musique de fond défini
+Background music locations:=Emplacements de musique de fond :
+Invalid index. Use @1 to see valid indices=Index invalide. Utilisez @1 pour voir les indices valides
+Removed background music location at @1=Emplacement de musique de fond supprimé en @1
+List available music files with optional filter (supports wildcards, | for OR, ! for NOT)=Lister les fichiers musicaux disponibles avec filtre optionnel (supporte les jokers, | pour OU, ! pour NON)
+
+# Listmusic command
+(Rescanned: @1 → @2 songs) =(Nouvelle analyse : @1 → @2 chansons) 
+No songs match the filter: @1=Aucune chanson ne correspond au filtre : @1
+No music files found in sounds/ directory=Aucun fichier musical trouvé dans le répertoire sounds/
+Available music files=Fichiers musicaux disponibles
+Available music files (filter: @1):=Fichiers musicaux disponibles (filtre : @1):
+Manually trigger a rescan of the music folder=Déclencher manuellement une nouvelle analyse du dossier musical
+Music folder rescanned. Found @1 songs (was @2)=Dossier musical analysé à nouveau. @1 chansons trouvées (était @2)
+
+# Stereo
+Music Stereo=Stéréo Musical
