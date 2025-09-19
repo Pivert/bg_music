@@ -4,12 +4,12 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: bg_music\n"
+"Project-Id-Version: bg_music 1.2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-18 23:30+0000\n"
-"PO-Revision-Date: 2025-09-18 23:35+0000\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2025-09-19 12:00+0000\n"
+"PO-Revision-Date: 2025-09-19 12:00+0000\n"
+"Last-Translator: Pivert <fun@pivert.org>\n"
+"Language-Team: Brazilian Portuguese\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -126,7 +126,7 @@ msgstr "Ative a música de fundo para você"
 
 #: init.lua
 msgid "Set background music at current position. radius_trigger: distance where music starts (meters). extra_radius: additional distance where music stops (meters). volume: 5-99 (default 65). filter: optional song filter (supports wildcards, | for OR, ! for NOT)."
-msgstr "Definir música de fundo na posição atual. raio_gatilho: distância onde a música começa (metros). raio_extra: distância adicional onde a música para (metros). volume: 5-99 (padrão 65). filtro: filtro opcional de música (suporta curingas, | para OU, ! para NÃO)."
+msgstr "Definir música de fundo na posição atual. raio_gatilho: distância onde a música começa (metros). raio_extra: distância adicional onde a música para (metros). volume: 5-99 (padrão 65). filtro: filtro opcional de músicas (suporta curingas, | para OU, ! para NÃO)."
 
 #: init.lua
 msgid "Usage: @1 <radius_trigger> <extra_radius> [<volume>] [<filter>]"
@@ -143,6 +143,10 @@ msgstr "O raio extra deve ser um número não negativo"
 #: init.lua
 msgid "Volume must be between @1 and @2"
 msgstr "O volume deve estar entre @1 e @2"
+
+#: init.lua
+msgid "Player not found"
+msgstr "Jogador não encontrado"
 
 #: init.lua
 msgid "Background music location set at @1 with trigger radius @2 and extra radius @3"
