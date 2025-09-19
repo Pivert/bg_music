@@ -941,20 +941,30 @@ core.register_chatcommand("testlang", {
 		local S_player = core.get_translator("bg_music")
 		local player_lang = player:get_meta():get_string("language")
 		local system_lang = core.settings:get("language") or "not_set"
+		local client_info = core.get_player_information(name)
+		local client_lang = client_info and client_info.lang_code or "not_available"
 		
 		-- Test different strings
 		local test1 = S_player("Music is enabled for you. Use @1 to disable it.", "/disablemusic")
 		local test2 = S_player("Music disabled. You will no longer hear automatic background music.")
 		local test3 = S_player("Available music files")
+		local test4 = S_player("Set your personal music volume (0-100%)")
 		
 		local result = "Language test results:\n"
 		result = result .. "System language: " .. system_lang .. "\n"
-		result = result .. "Player meta language: " .. player_lang .. "\n"
-		result = result .. "Test 1: " .. test1 .. "\n"
-		result = result .. "Test 2: " .. test2 .. "\n"
-		result = result .. "Test 3: " .. test3 .. "\n"
-		result = result .. "Raw results (what client should see):\n"
-		result = result .. "If you see codes like �(T@bg_music), the client is not interpreting translations"
+		result = result .. "Player meta language: '" .. player_lang .. "'\n"
+		result = result .. "Client language code: '" .. client_lang .. "'\n"
+		result = result .. "Test 1 (parametrized): " .. test1 .. "\n"
+		result = result .. "Test 2 (simple): " .. test2 .. "\n"
+		result = result .. "Test 3 (menu): " .. test3 .. "\n"
+		result = result .. "Test 4 (command): " .. test4 .. "\n"
+		result = result .. "\nInterpretation:\n"
+		if test1:find("�%(T") or test2:find("�%(T") then
+			result = result .. "❌ TRANSLATION FILES NOT LOADED - Client showing raw translation codes\n"
+		else
+			result = result .. "✅ TRANSLATION SYSTEM WORKING - Text should be translated\n"
+		end
+		result = result .. "If you see English text above, check client language settings\n"
 		
 		return true, result
 	end
@@ -1053,9 +1063,20 @@ core.register_on_joinplayer(function(player)
 		local test1 = S("Music is enabled for you. Use @1 to disable it.", "/disablemusic")
 		core.log("action", "[bg_music]   Direct FR test: " .. test1)
 		
-		-- Test 2: Try to force French context
-		core.log("action", "[bg_music]   Forcing French context...")
-		-- The result should be in French if files are loaded
+		-- Test 2: Simple string without parameters
+		local test2 = S("Available music files")
+		core.log("action", "[bg_music]   Simple FR test: " .. test2)
+		
+		-- Test 3: Check if translation files are being loaded
+		local test3 = S("Music disabled. You will no longer hear automatic background music.")
+		core.log("action", "[bg_music]   Disabled message test: " .. test3)
+		
+		-- Test 4: Try a command description
+		local test4 = S("Set your personal music volume (0-100%)")
+		core.log("action", "[bg_music]   Command description test: " .. test4)
+		
+		-- Log translation file status
+		core.log("action", "[bg_music]   Translation file check completed")
 	end
 	core.log("action", "[bg_music]   Available songs: " .. #bg_music.available_songs)
 	
