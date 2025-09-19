@@ -996,16 +996,16 @@ core.register_on_mods_loaded(function()
 	
 	-- Log available translation files
 	core.log("action", "[bg_music] Translation files check:")
-	local locale_files = core.get_dir_list(core.get_modpath("bg_music") .. "/locale", false) or {}
+	local locale_files = core.get_dir_list(core.get_modpath("bg_music") .. "/locale/po", false) or {}
 	for _, lang in ipairs({"fr", "de", "es", "it", "pt_BR"}) do
 		local found = false
 		for _, file in ipairs(locale_files) do
-			if file == lang .. ".txt" then
+			if file == lang .. ".po" then
 				found = true
 				break
 			end
 		end
-		core.log("action", "[bg_music]   " .. lang .. ".txt: " .. (found and "FOUND" or "NOT FOUND"))
+		core.log("action", "[bg_music]   " .. lang .. ".po: " .. (found and "FOUND" or "NOT FOUND"))
 	end
 	
 	-- Test translation with different approaches
@@ -1056,28 +1056,42 @@ core.register_on_joinplayer(function(player)
 		core.log("action", "[bg_music]   Client info available: no")
 	end
 	
-	-- Test different translation approaches for French
+	-- Test different translation approaches for multiple languages
+	core.log("action", "[bg_music] Testing translations for system language: " .. system_lang)
+	
+	-- Test 1: French
 	if system_lang == "fr" then
 		core.log("action", "[bg_music] Testing French translations:")
-		
-		-- Test 1: Direct string
 		local test1 = S("Music is enabled for you. Use @1 to disable it.", "/disablemusic")
-		core.log("action", "[bg_music]   Direct FR test: " .. test1)
+		core.log("action", "[bg_music]   FR test: " .. test1)
 		
-		-- Test 2: Simple string without parameters
+	-- Test 2: German  
+	elseif system_lang == "de" then
+		core.log("action", "[bg_music] Testing German translations:")
+		local test1 = S("Music is enabled for you. Use @1 to disable it.", "/disablemusic")
+		core.log("action", "[bg_music]   DE test: " .. test1)
 		local test2 = S("Available music files")
-		core.log("action", "[bg_music]   Simple FR test: " .. test2)
-		
-		-- Test 3: Check if translation files are being loaded
+		core.log("action", "[bg_music]   DE simple test: " .. test2)
 		local test3 = S("Music disabled. You will no longer hear automatic background music.")
-		core.log("action", "[bg_music]   Disabled message test: " .. test3)
+		core.log("action", "[bg_music]   DE disabled test: " .. test3)
 		
-		-- Test 4: Try a command description
-		local test4 = S("Set your personal music volume (0-100%)")
-		core.log("action", "[bg_music]   Command description test: " .. test4)
+	-- Test 3: Italian
+	elseif system_lang == "it" then
+		core.log("action", "[bg_music] Testing Italian translations:")
+		local test1 = S("Music is enabled for you. Use @1 to disable it.", "/disablemusic")
+		core.log("action", "[bg_music]   IT test: " .. test1)
 		
-		-- Log translation file status
-		core.log("action", "[bg_music]   Translation file check completed")
+	-- Test 4: Spanish
+	elseif system_lang == "es" then
+		core.log("action", "[bg_music] Testing Spanish translations:")
+		local test1 = S("Music is enabled for you. Use @1 to disable it.", "/disablemusic")
+		core.log("action", "[bg_music]   ES test: " .. test1)
+		
+	-- Test 5: Portuguese
+	elseif system_lang == "pt_BR" then
+		core.log("action", "[bg_music] Testing Portuguese translations:")
+		local test1 = S("Music is enabled for you. Use @1 to disable it.", "/disablemusic")
+		core.log("action", "[bg_music]   PT_BR test: " .. test1)
 	end
 	core.log("action", "[bg_music]   Available songs: " .. #bg_music.available_songs)
 	
