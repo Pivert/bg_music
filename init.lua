@@ -939,7 +939,7 @@ core.register_chatcommand("testlang", {
 			return false, "Player not found"
 		end
 		
-		local S_player = core.get_translator("bg_music")
+	local S_player = core.get_translator("bg_music")
 		local player_lang = player:get_meta():get_string("language")
 		local system_lang = core.settings:get("language") or "not_set"
 		local client_info = core.get_player_information(name)
@@ -1094,6 +1094,15 @@ core.register_on_joinplayer(function(player)
 		core.log("action", "[bg_music]   PT_BR test: " .. test1)
 	end
 	core.log("action", "[bg_music]   Available songs: " .. #bg_music.available_songs)
+	
+	-- Test all available languages
+	core.log("action", "[bg_music] Testing all available languages:")
+	local test_languages = {"fr", "de", "es", "it", "pt_BR"}
+	for _, lang in ipairs(test_languages) do
+		local S_lang = core.get_translator("bg_music")
+		local test_msg = S_lang("Music is enabled for you. Use @1 to disable it.", "/disablemusic")
+		core.log("action", "[bg_music]   " .. lang .. " test: " .. test_msg)
+	end
 	
 	-- Use direct translation with fallback
 	local S_player = core.get_translator("bg_music")
