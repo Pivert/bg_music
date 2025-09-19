@@ -20,7 +20,7 @@ local MUSIC_PREF_ENABLED = "enabled"
 local MUSIC_PREF_DISABLED = "disabled"
 local DEFAULT_MUSIC_VOLUME = 90 -- Default personal volume percentage
 
--- Get translator function
+-- Get translator function (using PO format)
 local S = core.get_translator("bg_music")
 
 -- Debug function to test translations
@@ -397,7 +397,7 @@ function bg_music.check_player_zone(player)
 				local handle = core.sound_play(song_name, {
 					to_player = player_name,
 					gain = effective_gain,
-					loop = true,
+					loop = false, -- Changed to false to allow playlist progression
 				})
 
 				bg_music.active_music[player_name] = {
@@ -930,21 +930,33 @@ core.register_chatcommand("enablemusic", {
 	end
 })
 
-core.register_chatcommand("setmusicvolume", {
-	params = "<volume>",
-	description = S("Set your personal music volume (0-100%)"),
+core.register_chatcommand("testlang", {
+	description = "Test language detection and translation",
 	func = function(name, param)
-		local volume = tonumber(param)
-		if not volume then
-			return false, safe_translate("Usage: @1 <volume> (0-100)", "/setmusicvolume")
+		local player = core.get_player_by_name(name)
+		if not player then
+			return false, "Player not found"
 		end
 		
-		local success, message = bg_music.set_player_volume(name, volume)
-		if success then
-			return true, safe_translate("Volume set to @1%", volume)
-		else
-			return false, safe_translate("Volume must be between 0 and 100")
-		end
+		local S_player = core.get_translator("bg_music")
+		local player_lang = player:get_meta():get_string("language")
+		local system_lang = core.settings:get("language") or "not_set"
+		
+		-- Test different strings
+		local test1 = S_player("Music is enabled for you. Use @1 to disable it.", "/disablemusic")
+		local test2 = S_player("Music disabled. You will no longer hear automatic background music.")
+		local test3 = S_player("Available music files")
+		
+		local result = "Language test results:\n"
+		result = result .. "System language: " .. system_lang .. "\n"
+		result = result .. "Player meta language: " .. player_lang .. "\n"
+		result = result .. "Test 1: " .. test1 .. "\n"
+		result = result .. "Test 2: " .. test2 .. "\n"
+		result = result .. "Test 3: " .. test3 .. "\n"
+		result = result .. "Raw results (what client should see):\n"
+		result = result .. "If you see codes like �(T@bg_music), the client is not interpreting translations"
+		
+		return true, result
 	end
 })
 
@@ -956,9 +968,50 @@ core.register_on_mods_loaded(function()
 	bg_music.scan_songs()
 	core.log("action", "[bg_music] Mod loaded with " .. #bg_music.available_songs .. " songs available")
 	
-	-- Test translation
+	-- Test translation with language detection
+	local system_lang = core.settings:get("language") or "not_set"
 	local test_translator = core.get_translator("bg_music")
-	core.log("action", "[bg_music] Translation test: " .. test_translator("Music is enabled for you. Use @1 to disable it.", "/disablemusic"))
+	local test_result = test_translator("Music is enabled for you. Use @1 to disable it.", "/disablemusic")
+	core.log("action", "[bg_music] System language: " .. system_lang)
+	core.log("action", "[bg_music] Translation test: " .. test_result)
+	
+	-- Test direct translation without parameters
+	local simple_test = test_translator("Music enabled. You will now hear background music.")
+	core.log("action", "[bg_music] Simple translation test: " .. simple_test)
+	
+	-- Test if translation files are being loaded by checking a known string
+	local test_known_string = test_translator("Available music files")
+	core.log("action", "[bg_music] Known string test: " .. test_known_string)
+	
+	-- Log available translation files
+	core.log("action", "[bg_music] Translation files check:")
+	local locale_files = core.get_dir_list(core.get_modpath("bg_music") .. "/locale", false) or {}
+	for _, lang in ipairs({"fr", "de", "es", "it", "pt_BR"}) do
+		local found = false
+		for _, file in ipairs(locale_files) do
+			if file == lang .. ".txt" then
+				found = true
+				break
+			end
+		end
+		core.log("action", "[bg_music]   " .. lang .. ".txt: " .. (found and "FOUND" or "NOT FOUND"))
+	end
+	
+	-- Test translation with different approaches
+	core.log("action", "[bg_music] Translation method tests:")
+	
+	-- Method 1: Direct S() call
+	local method1 = S("Available music files")
+	core.log("action", "[bg_music]   Method 1 (S()): " .. method1)
+	
+	-- Method 2: get_translator in function
+	local S_func = core.get_translator("bg_music")
+	local method2 = S_func("Available music files")
+	core.log("action", "[bg_music]   Method 2 (get_translator in function): " .. method2)
+	
+	-- Method 3: Test with parameter
+	local method3 = S_func("Volume set to @1%", 75)
+	core.log("action", "[bg_music]   Method 3 (with parameter): " .. method3)
 end)
 
 -- Notify players of their music preference on join
@@ -966,13 +1019,53 @@ core.register_on_joinplayer(function(player)
 	local player_name = player:get_player_name()
 	local is_disabled = bg_music.is_music_disabled(player_name)
 	
+	-- Debug: log player language info
+	local player_lang = player:get_meta():get_string("language")
+	local system_lang = core.settings:get("language") or "not_set"
+	local client_lang = player:get_meta():get_string("client_language") or "not_set"
+	
+	-- Also try other possible language detection methods
+	local env_lang = os.getenv("LANG") or os.getenv("LANGUAGE") or "not_set"
+	local locale_lang = os.setlocale(nil, "ctype") or "not_set"
+	
+	core.log("action", "[bg_music] Player " .. player_name .. " joined:")
+	core.log("action", "[bg_music]   Player meta language: '" .. player_lang .. "'")
+	core.log("action", "[bg_music]   System language: '" .. system_lang .. "'")
+	core.log("action", "[bg_music]   Client language: '" .. client_lang .. "'")
+	core.log("action", "[bg_music]   Environment LANG: '" .. env_lang .. "'")
+	core.log("action", "[bg_music]   Locale: '" .. locale_lang .. "'")
+	
+	-- Test if we can detect client language through other means
+	local client_info = core.get_player_information(player_name)
+	if client_info then
+		core.log("action", "[bg_music]   Client info available: yes")
+		core.log("action", "[bg_music]   Client version: " .. (client_info.version_string or "unknown"))
+		core.log("action", "[bg_music]   Client lang code: " .. (client_info.lang_code or "unknown"))
+	else
+		core.log("action", "[bg_music]   Client info available: no")
+	end
+	
+	-- Test different translation approaches for French
+	if system_lang == "fr" then
+		core.log("action", "[bg_music] Testing French translations:")
+		
+		-- Test 1: Direct string
+		local test1 = S("Music is enabled for you. Use @1 to disable it.", "/disablemusic")
+		core.log("action", "[bg_music]   Direct FR test: " .. test1)
+		
+		-- Test 2: Try to force French context
+		core.log("action", "[bg_music]   Forcing French context...")
+		-- The result should be in French if files are loaded
+	end
+	core.log("action", "[bg_music]   Available songs: " .. #bg_music.available_songs)
+	
 	-- Use direct translation with fallback
 	local S_player = core.get_translator("bg_music")
 	if is_disabled then
-		local msg = S_player("Music is currently disabled for you. Use @1 to enable it.", "/enablemusic")
+		local msg = debug_translate("Music is currently disabled for you. Use @1 to enable it.", "/enablemusic")
 		core.chat_send_player(player_name, msg)
 	else
-		local msg = S_player("Music is enabled for you. Use @1 to disable it.", "/disablemusic")
+		local msg = debug_translate("Music is enabled for you. Use @1 to disable it.", "/disablemusic")
 		core.chat_send_player(player_name, msg)
 	end
 end)

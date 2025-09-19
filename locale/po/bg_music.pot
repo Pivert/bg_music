@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the bg_music package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: bg_music\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-18 23:30+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: init.lua
+msgid "Music is currently disabled for you. Use @1 to enable it."
+msgstr ""
+
+#: init.lua
+msgid "Music is enabled for you. Use @1 to disable it."
+msgstr ""
+
+#: init.lua
+msgid "Music disabled. You will no longer hear automatic background music."
+msgstr ""
+
+#: init.lua
+msgid "Music enabled. You will now hear background music."
+msgstr ""
+
+#: init.lua
+msgid "Failed to disable music."
+msgstr ""
+
+#: init.lua
+msgid "Failed to enable music."
+msgstr ""
+
+#: init.lua
+msgid "Set your personal music volume (0-100%)"
+msgstr ""
+
+#: init.lua
+msgid "Usage: @1 <volume> (0-100)"
+msgstr ""
+
+#: init.lua
+msgid "Volume set to @1%"
+msgstr ""
+
+#: init.lua
+msgid "Volume must be between 0 and 100"
+msgstr ""
+
+#: init.lua
+msgid "Music is disabled for you. Use @1 to enable it."
+msgstr ""
+
+#: init.lua
+msgid "Stereo music stopped"
+msgstr ""
+
+#: init.lua
+msgid "No music files found in sounds/ directory"
+msgstr ""
+
+#: init.lua
+msgid "Playing: @1"
+msgstr ""
+
+#: init.lua
+msgid "Play a song by number (from /listmusic) or name. Use 'all' to play globally"
+msgstr ""
+
+#: init.lua
+msgid "No players available to hear the music (all have disabled music)"
+msgstr ""
+
+#: init.lua
+msgid "You have disabled music. Use @1 first."
+msgstr ""
+
+#: init.lua
+msgid "Invalid song number. Use 1-@1"
+msgstr ""
+
+#: init.lua
+msgid "No music available"
+msgstr ""
+
+#: init.lua
+msgid "Song not found: @1. Use @2 to see available songs"
+msgstr ""
+
+#: init.lua
+msgid "Player not found"
+msgstr ""
+
+#: init.lua
+msgid "Failed to play music"
+msgstr ""
+
+#: init.lua
+msgid "Stop all background music currently playing"
+msgstr ""
+
+#: init.lua
+msgid "Stopped @1 music instances"
+msgstr ""
+
+#: init.lua
+msgid "No music currently playing"
+msgstr ""
+
+#: init.lua
+msgid "Disable all background music for yourself"
+msgstr ""
+
+#: init.lua
+msgid "Enable background music for yourself"
+msgstr ""
+
+#: init.lua
+msgid "Set background music at current position. radius_trigger: distance where music starts (meters). extra_radius: additional distance where music stops (meters). volume: 5-99 (default 65). filter: optional song filter (supports wildcards, | for OR, ! for NOT)."
+msgstr ""
+
+#: init.lua
+msgid "Usage: @1 <radius_trigger> <extra_radius> [<volume>] [<filter>]"
+msgstr ""
+
+#: init.lua
+msgid "Radius trigger must be a positive number"
+msgstr ""
+
+#: init.lua
+msgid "Extra radius must be a non-negative number"
+msgstr ""
+
+#: init.lua
+msgid "Volume must be between @1 and @2"
+msgstr ""
+
+#: init.lua
+msgid "Background music location set at @1 with trigger radius @2 and extra radius @3"
+msgstr ""
+
+#: init.lua
+msgid "Background music location set at @1 with trigger radius @2 and extra radius @3 (filter: @4)"
+msgstr ""
+
+#: init.lua
+msgid "List all background music locations with coordinates, radius, volume, and filters"
+msgstr ""
+
+#: init.lua
+msgid "No background music locations defined"
+msgstr ""
+
+#: init.lua
+msgid "Background music locations:"
+msgstr ""
+
+#: init.lua
+msgid "Invalid index. Use @1 to see valid indices"
+msgstr ""
+
+#: init.lua
+msgid "Removed background music location at @1"
+msgstr ""
+
+#: init.lua
+msgid "List available music files with optional filter (supports wildcards, | for OR, ! for NOT)"
+msgstr ""
+
+#: init.lua
+msgid "(Rescanned: @1 → @2 songs) "
+msgstr ""
+
+#: init.lua
+msgid "No songs match the filter: @1"
+msgstr ""
+
+#: init.lua
+msgid "Available music files"
+msgstr ""
+
+#: init.lua
+msgid "Available music files (filter: @1):"
+msgstr ""
+
+#: init.lua
+msgid "Manually trigger a rescan of the music folder"
+msgstr ""
+
+#: init.lua
+msgid "Music folder rescanned. Found @1 songs (was @2)"
+msgstr ""
+
+#: init.lua
+msgid "Music Stereo"
+msgstr ""

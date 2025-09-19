@@ -1,0 +1,205 @@
+# Italian translations for bg_music mod
+# Copyright (C) 2025 Pivert
+# This file is distributed under the same license as the bg_music package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bg_music\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-18 23:30+0000\n"
+"PO-Revision-Date: 2025-09-18 23:35+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: init.lua
+msgid "Music is currently disabled for you. Use @1 to enable it."
+msgstr "La musica è attualmente disattivata per te. Usa @1 per attivarla."
+
+#: init.lua
+msgid "Music is enabled for you. Use @1 to disable it."
+msgstr "La musica è attivata per te. Usa @1 per disattivarla."
+
+#: init.lua
+msgid "Music disabled. You will no longer hear automatic background music."
+msgstr "Musica disattivata. Non sentirai più la musica di sottofondo automatica."
+
+#: init.lua
+msgid "Music enabled. You will now hear background music."
+msgstr "Musica attivata. Ora sentirai la musica di sottofondo."
+
+#: init.lua
+msgid "Failed to disable music."
+msgstr "Impossibile disattivare la musica."
+
+#: init.lua
+msgid "Failed to enable music."
+msgstr "Impossibile attivare la musica."
+
+#: init.lua
+msgid "Set your personal music volume (0-100%)"
+msgstr "Imposta il tuo volume musicale personale (0-100%)"
+
+#: init.lua
+msgid "Usage: @1 <volume> (0-100)"
+msgstr "Uso: @1 <volume> (0-100)"
+
+#: init.lua
+msgid "Volume set to @1%"
+msgstr "Volume impostato al @1%"
+
+#: init.lua
+msgid "Volume must be between 0 and 100"
+msgstr "Il volume deve essere compreso tra 0 e 100"
+
+#: init.lua
+msgid "Music is disabled for you. Use @1 to enable it."
+msgstr "La musica è disattivata per te. Usa @1 per attivarla."
+
+#: init.lua
+msgid "Stereo music stopped"
+msgstr "Musica stereo fermata"
+
+#: init.lua
+msgid "No music files found in sounds/ directory"
+msgstr "Nessun file musicale trovato nella directory sounds/"
+
+#: init.lua
+msgid "Playing: @1"
+msgstr "In riproduzione: @1"
+
+#: init.lua
+msgid "Play a song by number (from /listmusic) or name. Use 'all' to play globally"
+msgstr "Riproduci una canzone per numero (da /listmusic) o nome. Usa 'all' per riprodurre globalmente"
+
+#: init.lua
+msgid "No players available to hear the music (all have disabled music)"
+msgstr "Nessun giocatore disponibile per ascoltare la musica (tutti hanno disattivato la musica)"
+
+#: init.lua
+msgid "You have disabled music. Use @1 first."
+msgstr "Hai disattivato la musica. Usa @1 prima."
+
+#: init.lua
+msgid "Invalid song number. Use 1-@1"
+msgstr "Numero di canzone non valido. Usa 1-@1"
+
+#: init.lua
+msgid "No music available"
+msgstr "Nessuna musica disponibile"
+
+#: init.lua
+msgid "Song not found: @1. Use @2 to see available songs"
+msgstr "Canzone non trovata: @1. Usa @2 per vedere le canzoni disponibili"
+
+#: init.lua
+msgid "Player not found"
+msgstr "Giocatore non trovato"
+
+#: init.lua
+msgid "Failed to play music"
+msgstr "Impossibile riprodurre la musica"
+
+#: init.lua
+msgid "Stop all background music currently playing"
+msgstr "Ferma tutta la musica di sottofondo in riproduzione"
+
+#: init.lua
+msgid "Stopped @1 music instances"
+msgstr "Fermate @1 istanze musicali"
+
+#: init.lua
+msgid "No music currently playing"
+msgstr "Nessuna musica in riproduzione"
+
+#: init.lua
+msgid "Disable all background music for yourself"
+msgstr "Disattiva tutta la musica di sottofondo per te"
+
+#: init.lua
+msgid "Enable background music for yourself"
+msgstr "Attiva la musica di sottofondo per te"
+
+#: init.lua
+msgid "Set background music at current position. radius_trigger: distance where music starts (meters). extra_radius: additional distance where music stops (meters). volume: 5-99 (default 65). filter: optional song filter (supports wildcards, | for OR, ! for NOT)."
+msgstr "Imposta la musica di sottofondo nella posizione corrente. raggio_attivazione: distanza dove la musica inizia (metri). raggio_extra: distanza aggiuntiva dove la musica si ferma (metri). volume: 5-99 (predefinito 65). filtro: filtro opzionale per canzoni (supporta caratteri jolly, | per O, ! per NON)."
+
+#: init.lua
+msgid "Usage: @1 <radius_trigger> <extra_radius> [<volume>] [<filter>]"
+msgstr "Uso: @1 <raggio_attivazione> <raggio_extra> [<volume>] [<filtro>]"
+
+#: init.lua
+msgid "Radius trigger must be a positive number"
+msgstr "Il raggio di attivazione deve essere un numero positivo"
+
+#: init.lua
+msgid "Extra radius must be a non-negative number"
+msgstr "Il raggio extra deve essere un numero non negativo"
+
+#: init.lua
+msgid "Volume must be between @1 and @2"
+msgstr "Il volume deve essere compreso tra @1 e @2"
+
+#: init.lua
+msgid "Background music location set at @1 with trigger radius @2 and extra radius @3"
+msgstr "Posizione musica di sottofondo impostata su @1 con raggio di attivazione @2 e raggio extra @3"
+
+#: init.lua
+msgid "Background music location set at @1 with trigger radius @2 and extra radius @3 (filter: @4)"
+msgstr "Posizione musica di sottofondo impostata su @1 con raggio di attivazione @2, raggio extra @3 (filtro: @4)"
+
+#: init.lua
+msgid "List all background music locations with coordinates, radius, volume, and filters"
+msgstr "Elenca tutte le posizioni musica di sottofondo con coordinate, raggio, volume e filtri"
+
+#: init.lua
+msgid "No background music locations defined"
+msgstr "Nessuna posizione musica di sottofondo definita"
+
+#: init.lua
+msgid "Background music locations:"
+msgstr "Posizioni musica di sottofondo:"
+
+#: init.lua
+msgid "Invalid index. Use @1 to see valid indices"
+msgstr "Indice non valido. Usa @1 per vedere gli indici validi"
+
+#: init.lua
+msgid "Removed background music location at @1"
+msgstr "Rimossa posizione musica di sottofondo su @1"
+
+#: init.lua
+msgid "List available music files with optional filter (supports wildcards, | for OR, ! for NOT)"
+msgstr "Elenca i file musicali disponibili con filtro opzionale (supporta caratteri jolly, | per O, ! per NON)"
+
+#: init.lua
+msgid "(Rescanned: @1 → @2 songs) "
+msgstr "(Riscansionato: @1 → @2 canzoni) "
+
+#: init.lua
+msgid "No songs match the filter: @1"
+msgstr "Nessuna canzone corrisponde al filtro: @1"
+
+#: init.lua
+msgid "Available music files"
+msgstr "File musicali disponibili"
+
+#: init.lua
+msgid "Available music files (filter: @1):"
+msgstr "File musicali disponibili (filtro: @1):"
+
+#: init.lua
+msgid "Manually trigger a rescan of the music folder"
+msgstr "Attiva manualmente una nuova scansione della cartella musicale"
+
+#: init.lua
+msgid "Music folder rescanned. Found @1 songs (was @2)"
+msgstr "Cartella musicale riscansionata. Trovate @1 canzoni (erano @2)"
+
+#: init.lua
+msgid "Music Stereo"
+msgstr "Stereo Musicale"
