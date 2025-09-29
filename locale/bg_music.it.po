@@ -93,6 +93,11 @@ msgstr "Riproduci una canzone per numero (da /listmusic) o nome. Usa 'all' per r
 
 #: init.lua
 msgctxt "bg_music"
+msgid "You need the 'setmusic' privilege to play music globally"
+msgstr "Hai bisogno del privilegio 'setmusic' per riprodurre la musica globalmente"
+
+#: init.lua
+msgctxt "bg_music"
 msgid "No players available to hear the music (all have disabled music)"
 msgstr "Nessun giocatore disponibile per ascoltare la musica (tutti hanno disattivato la musica)"
 

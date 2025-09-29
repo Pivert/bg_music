@@ -93,6 +93,11 @@ msgstr "Spielen Sie einen Titel nach Nummer (von /listmusic) oder Name ab. Verwe
 
 #: init.lua
 msgctxt "bg_music"
+msgid "You need the 'setmusic' privilege to play music globally"
+msgstr "Sie benötigen das 'setmusic'-Recht, um Musik global abzuspielen"
+
+#: init.lua
+msgctxt "bg_music"
 msgid "No players available to hear the music (all have disabled music)"
 msgstr "Keine Spieler verfügbar, um die Musik zu hören (alle haben die Musik deaktiviert)"
 

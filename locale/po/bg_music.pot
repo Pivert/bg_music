@@ -79,6 +79,10 @@ msgid "Play a song by number (from /listmusic) or name. Use 'all' to play global
 msgstr ""
 
 #: init.lua
+msgid "You need the 'setmusic' privilege to play music globally"
+msgstr ""
+
+#: init.lua
 msgid "No players available to hear the music (all have disabled music)"
 msgstr ""
 

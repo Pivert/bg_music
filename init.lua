@@ -732,6 +732,11 @@ core.register_chatcommand("playmusic", {
 		local song_input = parts[1]
 		local play_global = parts[2] == "all"
 		
+		-- Check privilege for global playback
+		if play_global and not core.check_player_privs(name, {setmusic = true}) then
+			return false, S("You need the 'setmusic' privilege to play music globally")
+		end
+		
 		-- If playing globally, check if any players have disabled music
 		if play_global then
 			local affected_players = 0
