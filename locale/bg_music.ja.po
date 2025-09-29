@@ -1,0 +1,262 @@
+# Japanese translations for bg_music mod
+# Copyright (C) 2025 Pivert
+# This file is distributed under the same license as the bg_music package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: bg_music 1.2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-19 12:00+0000\n"
+"PO-Revision-Date: 2025-09-19 12:00+0000\n"
+"Last-Translator: Pivert <fun@pivert.org>\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Music is currently disabled for you. Use @1 to enable it."
+msgstr "音楽が現在無効になっています。@1を使用して有効にしてください。"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Music is enabled for you. Use @1 to disable it."
+msgstr "音楽が有効になっています。@1を使用して無効にしてください。"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Music disabled. You will no longer hear automatic background music."
+msgstr "音楽が無効になりました。自動的なバックグラウンド音楽は聞こえなくなります。"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Music enabled. You will now hear background music."
+msgstr "音楽が有効になりました。バックグラウンド音楽が聞こえるようになります。"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Failed to disable music."
+msgstr "音楽の無効化に失敗しました。"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Failed to enable music."
+msgstr "音楽の有効化に失敗しました。"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Set your personal music volume (0-100%)"
+msgstr "個人の音楽音量を設定（0-100%）"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Usage: @1 <volume> (0-100)"
+msgstr "使用方法: @1 <音量> (0-100)"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Volume set to @1%"
+msgstr "音量が@1%に設定されました"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Volume must be between 0 and 100"
+msgstr "音量は0から100の間でなければなりません"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Music is disabled for you. Use @1 to enable it."
+msgstr "音楽が無効になっています。@1を使用して有効にしてください。"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Stereo music stopped"
+msgstr "ステレオ音楽が停止しました"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "No music files found in sounds/ directory"
+msgstr "sounds/ディレクトリに音楽ファイルが見つかりません"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Playing: @1"
+msgstr "再生中: @1"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Play a song by number (from /listmusic) or name. Use 'all' to play globally"
+msgstr "番号（/listmusicから）または名前で曲を再生。'all'を使用してグローバルに再生"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "You need the 'setmusic' privilege to play music globally"
+msgstr "音楽をグローバルに再生するには'setmusic'権限が必要です"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "No players available to hear the music (all have disabled music)"
+msgstr "音楽を聞けるプレイヤーがいません（全員が音楽を無効にしています）"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "You have disabled music. Use @1 first."
+msgstr "音楽を無効にしています。まず@1を使用してください。"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Invalid song number. Use 1-@1"
+msgstr "無効な曲番号です。1-@1を使用してください"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "No music available"
+msgstr "利用可能な音楽がありません"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Song not found: @1. Use @2 to see available songs"
+msgstr "曲が見つかりません: @1。利用可能な曲を見るには@2を使用してください"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Player not found"
+msgstr "プレイヤーが見つかりません"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Failed to play music"
+msgstr "音楽の再生に失敗しました"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Stop all background music currently playing"
+msgstr "現在再生中の全てのバックグラウンド音楽を停止"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Stopped @1 music instances"
+msgstr "@1個の音楽インスタンスを停止しました"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "No music currently playing"
+msgstr "現在再生中の音楽はありません"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Disable all background music for yourself"
+msgstr "自分用の全てのバックグラウンド音楽を無効化"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Enable background music for yourself"
+msgstr "自分用のバックグラウンド音楽を有効化"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Set background music at current position. radius_trigger: distance where music starts (meters). extra_radius: additional distance where music stops (meters). volume: 5-99 (default 65). filter: optional song filter (supports wildcards, | for OR, ! for NOT)."
+msgstr "現在位置にバックグラウンド音楽を設定。radius_trigger: 音楽が開始される距離（メートル）。extra_radius: 音楽が停止される追加距離（メートル）。volume: 5-99（デフォルト65）。filter: オプションの曲フィルタ（ワイルドカード、|でOR、!でNOTをサポート）。"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Usage: @1 <radius_trigger> <extra_radius> [<volume>] [<filter>]"
+msgstr "使用方法: @1 <radius_trigger> <extra_radius> [<volume>] [<filter>]"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Radius trigger must be a positive number"
+msgstr "Radius_triggerは正の数でなければなりません"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Extra radius must be a non-negative number"
+msgstr "Extra_radiusは負でない数でなければなりません"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Volume must be between @1 and @2"
+msgstr "Volumeは@1から@2の間でなければなりません"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Player not found"
+msgstr "プレイヤーが見つかりません"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Background music location set at @1 with trigger radius @2 and extra radius @3"
+msgstr "バックグラウンド音楽の場所が@1に設定されました（トリガー半径@2、追加半径@3）"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Background music location set at @1 with trigger radius @2 and extra radius @3 (filter: @4)"
+msgstr "バックグラウンド音楽の場所が@1に設定されました（トリガー半径@2、追加半径@3、フィルター: @4）"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "List all background music locations with coordinates, radius, volume, and filters"
+msgstr "全てのバックグラウンド音楽の場所を座標、半径、音量、フィルター付きで一覧表示"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "No background music locations defined"
+msgstr "バックグラウンド音楽の場所が定義されていません"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Background music locations:"
+msgstr "バックグラウンド音楽の場所:"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Invalid index. Use @1 to see valid indices"
+msgstr "無効なインデックスです。有効なインデックスを見るには@1を使用してください"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Removed background music location at @1"
+msgstr "@1のバックグラウンド音楽の場所が削除されました"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "List available music files with optional filter (supports wildcards, | for OR, ! for NOT)"
+msgstr "利用可能な音楽ファイルをオプションフィルター付きで一覧表示（ワイルドカード、|でOR、!でNOTをサポート）"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "(Rescanned: @1 → @2 songs) "
+msgstr "（再スキャン: @1 → @2曲） "
+
+#: init.lua
+msgctxt "bg_music"
+msgid "No songs match the filter: @1"
+msgstr "フィルターに一致する曲がありません: @1"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Available music files"
+msgstr "利用可能な音楽ファイル"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Available music files (filter: @1):"
+msgstr "利用可能な音楽ファイル（フィルター: @1）:"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Manually trigger a rescan of the music folder"
+msgstr "音楽フォルダの手動再スキャンをトリガー"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Music folder rescanned. Found @1 songs (was @2)"
+msgstr "音楽フォルダが再スキャンされました。@1曲が見つかりました（@2でした）"
+
+#: init.lua
+msgctxt "bg_music"
+msgid "Music Stereo"
+msgstr "音楽ステレオ"
